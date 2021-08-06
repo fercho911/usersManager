@@ -74,7 +74,9 @@ public class UserWebController {
     
     @PostMapping("/delete")
     public ResponseUserList deleteUser(@RequestBody Usuario newUser) {
+        System.out.println("com.co.usersManager.um.web.UserWebController.deleteUser()");
         return user.delete( new Usuario(newUser.getId_usuario(),newUser.getRol(), newUser.getNombre(), newUser.getActivo()));
+        
     }
         
 }
